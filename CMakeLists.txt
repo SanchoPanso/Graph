@@ -5,6 +5,7 @@ set(CMAKE_CXX_STANDARD 14)
 
 enable_testing()
 
+
 add_library(graph
         src/base_graph.cpp
         src/graph_traversal.cpp
@@ -28,6 +29,6 @@ do_test(base_graph_test tests/BaseGraph_tests.cpp)
 do_test(graph_tarjans_bridges_test tests/GraphTarjansBridges_tests.cpp)
 
 # Install Rules
-install(TARGETS graph DESTINATION lib)
-install(FILES graph.h DESTINATION include)
+install(TARGETS graph DESTINATION ${PROJECT_SOURCE_DIR}/build/lib)
+install(FILES graph.h DESTINATION ${PROJECT_SOURCE_DIR}/build/include)
 
